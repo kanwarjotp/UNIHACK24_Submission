@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: sans-serif;
+  margin-top: 0%;
+  color: white
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  color: white;
+  font-size: 100px;
+  text-align: center;
+}
+
+.heading1 {
+  color: #fff;
+  /* Use white for better consistency */
+  font-size: 100px;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+  /* Add transition for smooth effect */
+}
+
+.heading2 {
+  color: #fff;
+  /* Use white for better consistency */
+  font-size: 100px;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+  /* Add transition for smooth effect */
+}
+
+.heading1:hover {
+  transform: translateX(-100vw);
+  /* Move 10px to the right on hover */
+}
+
+.heading2:hover {
+  transform: translateX(-100vw);
+  /* Move 10px to the right on hover */
+}
+
+
+#app {
+  min-height: 100vh;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.div {
+  background-color: white;
+}
