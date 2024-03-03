@@ -3,14 +3,18 @@ body {
   padding: 0;
   background-color: black;
   font-family: sans-serif;
-  margin-top: 0%;
-  color: white
+  color: white;
+  overflow-x: hidden;
 }
 
+.front{
+  min-height: 100vh;
+}
 .container {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -19,40 +23,16 @@ body {
   color: white;
   font-size: 100px;
   text-align: center;
+  text-shadow: 2px;
 }
 
-.heading1 {
-  color: #fff;
-  /* Use white for better consistency */
-  font-size: 100px;
-  text-align: center;
-  transition: transform 0.4s ease-in-out;
-  /* Add transition for smooth effect */
+#bgImg1 {
+  max-width: 50vh;
+  position: absolute;
+  z-index: -10;
+  filter:blur(3px)
 }
 
-.heading2 {
-  color: #fff;
-  /* Use white for better consistency */
-  font-size: 100px;
-  text-align: center;
-  transition: transform 0.4s ease-in-out;
-  /* Add transition for smooth effect */
-}
-
-.heading1:hover {
-  transform: translateX(-100vw);
-  /* Move 10px to the right on hover */
-}
-
-.heading2:hover {
-  transform: translateX(-100vw);
-  /* Move 10px to the right on hover */
-}
-
-
-#app {
-  min-height: 100vh;
-}
 
 .roboto-bold {
   font-family: "Roboto", sans-serif;
@@ -60,6 +40,50 @@ body {
   font-style: normal;
 }
 
+.tagline {
+  font-size: 25px;
+}
+
 .div {
   background-color: white;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  min-height: 100vh;
+}
+
+.blurplate {
+  background-color: whitesmoke;
+  box-shadow: inset;
+  filter: blur(6px);
+  min-width: 100vw;
+  min-height: 100vh;
+  gap: 40px;
+  z-index: -1;
+  position: absolute;
+}
+
+.item {
+  flex-basis: auto;
+}
+
+#shirt{
+
+}
+
+#trousers{
+
+}
+#jackets{
+
+}
+#shoes{
+
 }

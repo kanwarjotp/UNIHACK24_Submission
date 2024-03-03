@@ -20,10 +20,39 @@
   </head>
 
   <body>
-    <div class="container roboto-bold">
-      <span class="heading1">Shop</span><span class=".heading2">Swipe</span>
-      <span>Swipe Shop Slay</span>
+    <div class="container roboto-bold front">
+      <span class="heading">ShopSwipe</span>
+      <span class="tagline"><br>Swipe Shop Slay</span>
+      <img id="bgImg1"  src = "{{ url_for('static', filename='assets/images/bgImg1.png') }}"></img>
     </div>
-    <div id="app"></div>
+    <div id="app">
+
+      <div class="blurplate"></div>
+
+      <div class="container roboto-bold" id="app" >
+        {{ for item in data}}
+        <a href="https://www.myer.com.au/p/tommy-hilfiger-new-york-flag-tee-in-desert-sky"><div class = "item" id="shirt">
+               <a href="/UserDislike">Disklike</a>
+               <a href="/UserLike">Like</a>
+            <img src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/401/3639/200/7/107034760/107034760_1_1_360x464.webp"></img>
+        </div>   </a>
+        <a href="https://www.myer.com.au/p/tommy-hilfiger-new-york-flag-tee-in-desert-sky"><div class = "item"  id="shirt">
+          <a href="/UserDislike">Disklike</a>
+          <a href="/UserLike">Like</a>
+            <img src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/401/3639/200/7/107034760/107034760_1_1_360x464.webp"></img>
+        </div>   </a>
+        <a href="https://www.myer.com.au/p/tommy-hilfiger-new-york-flag-tee-in-desert-sky"><div class = "item"  id="shirt">
+          <a href="/UserDislike">Disklike</a>
+          <a href="/UserLike">Like</a>
+            <img src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/401/3639/200/7/107034760/107034760_1_1_360x464.webp"></img>
+        </div>   </a>
+        <a href="https://www.myer.com.au/p/tommy-hilfiger-new-york-flag-tee-in-desert-sky"><div class = "item"  id="shirt">
+          <a href="/UserDislike">Disklike</a>
+          <a href="/UserLike">Like</a>
+            <img src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/401/3639/200/7/107034760/107034760_1_1_360x464.webp"></img>
+        </div>   </a>
+
+        </div>
+    </div>
   </body>
 </html>

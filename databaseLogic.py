@@ -16,8 +16,9 @@ def createDatabase():
   con.close()
 
 
-def insertData(itemDesc, col, httpl, imgl):
-  with sqlite3.connect("inventroy.db") as conxn:
+def insertData(itemDesc, coltag, httpl, imgl):
+  with sqlite3.connect("inventory.db") as conxn:
+    cur = conxn.cursor()
     execStr = '''INSERT INTO INVENTORY ( itemdesc, coltags, httplink, imglink)
                               VALUES('{}', '{}', '{}', '{}')'''.format(itemDesc, coltag, httpl, imgl)
 
@@ -26,11 +27,23 @@ def insertData(itemDesc, col, httpl, imgl):
     
 
 
-def extractData(coltags):
+def extractData(colTags = "blue", first = False):
+  
   '''this function extracts the data entries from the inventory whose color matches the coltags value'''
-  with sqlite3.connect("inventroy.db") as conxn:
-    execStr = '''SELECT * FROM INVENTORY WHERE coltags = '{}' '''.format(coltags)
+  with sqlite3.connect("inventory.db") as conxn:
+    cur = conxn.cursor()
 
-    res = cur.execute(execStr)
-    return res.fetchall()
+    if not first:
+      execStr = '''SELECT * FROM INVENTORY WHERE coltags = '{}' '''.format(colTags)
+
+      res = cur.execute(execStr)
+      return res.fetchall()
+    else:
+      strtData = []
+      for i in ["shirt", "shoes", "jacket", "trouser"]:
+        execStr = '''SELECT * FROM INVENTORY WHERE itemdesc = "{}"'''.format(i)
+        res = cur.execute(execStr)
+        strtData.append(res.fetchone()[0]) # sends the first entry as default
+      
+      return strtData
   
